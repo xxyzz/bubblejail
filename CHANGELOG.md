@@ -3,6 +3,21 @@ SPDX-License-Identifier: GPL-3.0-or-later
 SPDX-FileCopyrightText: 2023 igo95862
 -->
 
+# 0.10.3
+
+* Fixed generated desktop entries not working if `DBusActivatable` was enabled in the template
+  desktop entry file. (reported by @xxyzz)
+* Added keyword tags to Bubblejail Configuration desktop entry to make it easier to search. Tags
+  include `bwrap`, `bubblewrap` and `sandbox`. (suggested by @toboil-features)
+
+### Experimental changes
+
+* `xdg_desktop_portal`: All portals are now disabled by default. This makes it easier to assess
+  which portals are enabled.
+* `xdg_desktop_portal`: Added `override_xdg_open` option to override `xdg-open` command with
+  a version that uses desktop portals. Currently relies on `flatpak-xdg-utils` Arch Linux
+  package but a standalone implementation will be added in the future.
+
 # 0.10.2
 
 * Reduced `python-cattrs` version requirements. Should now be compatible with Linux Mint 22.2.
